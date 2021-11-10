@@ -1,0 +1,130 @@
+/* BASICS and global settings */
+
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: hsl(0, 0%, 95%);
+    color: #fff;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/* grid is for keeping the small footer at the bottom */
+
+body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    font-size: 15px;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+/* container for centering card in the window */
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* card with grid that wraps columns on mobile */
+.card {
+    border-radius: 10px;
+    
+    width: 88%;
+    max-width: 920px;
+    overflow: hidden;
+    margin: 50px auto;
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(280px, 1fr) );
+
+}
+
+/* CAR CATEGORIES SECTIONS */
+
+/* i'm not sure of this part - i feel like it's hard coded -
+ - the part with button text color being the same as the parents bg */
+
+.card-category:nth-child(1) {
+    background: hsl(31, 77%, 52%);
+}
+
+.card-category:nth-child(1) a {
+    color: hsl(31, 77%, 52%); /* <=== code in question */
+}
+
+.card-category:nth-child(2) {
+    background: hsl(184, 100%, 22%);
+}
+
+.card-category:nth-child(2) a{
+    color: hsl(184, 100%, 22%);
+}
+
+.card-category:nth-child(3) {
+    background: hsl(179, 100%, 13%);
+}
+
+.card-category:nth-child(3) a{
+    color: hsl(179, 100%, 13%);
+}
+
+/* grid is for making sure that all buttons are on bottom of section
+    i could do it with flexbox, but i wanted to practice grid */
+
+.card-category {
+    padding: 45px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.card-category h2{
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.card-category p{
+    letter-spacing: 0.8px;
+}
+
+.card-button {
+    border: 1px solid #fff;
+    display: inline-block;
+    margin: 20px 0;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: #fff;
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+/* is it okay to use !important tag like this?
+    I wasn't able to overwrite the default color other way */
+
+.card-button:hover {
+    background: transparent;
+    color: #fff !important; 
+}
+
+
+/* ATTRIBUTION */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: hsl(31, 77%, 52%);
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
